@@ -4,11 +4,16 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "strict": true,
+    "strict": false,
+    "strictFunctionTypes": false,
+    "alwaysStrict": false,
     "module": "ES2020",
     "target": "ES2021",
     "types": ["node", "jest"],
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "resolveJsonModule": true
   },
-  "include": ["src", "knex"],
+  "include": ["src/**/*", "knex/**/*"],
   "exclude": ["node_modules"]
 }
