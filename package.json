@@ -5,10 +5,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "ts-node": "cross-env NODE_OPTIONS=\"--loader=ts-node/esm --no-warnings --experimental-specifier-resolution=node\" node",
+    "ts-node": "npx cross-env NODE_OPTIONS=\"--loader=ts-node/esm --no-warnings --experimental-specifier-resolution=node\" node",
     "start": "npm run ts-node src/index.ts",
     "predevelop": "npm run db:migrate && npm run db:seed",
-    "dev": "nodemon",
+    "dev": "npm run ts-node src/index.ts",
     "pretest": "cross-env NODE_ENV=test npm run db:rollback:all && cross-env NODE_ENV=test npm run db:migrate",
     "test": "jest --env=node",
     "knex": "npm run ts-node node_modules/knex/bin/cli.js",
