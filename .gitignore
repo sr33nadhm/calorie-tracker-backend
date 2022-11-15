@@ -92,6 +92,7 @@ typings/
 
 # End of https://www.gitignore.io/api/node
 
-*.sqlite3
+db.sqlite3
+db.test.sqlite3
 
 .vscode
