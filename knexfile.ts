@@ -24,4 +24,8 @@ export default {
     ...defaultKnexConfig,
     connection: { filename: config.dbTestFilename },
   },
+  production: {
+    ...defaultKnexConfig,
+    connection: { filename: config.dbFilename },
+  },
 };
