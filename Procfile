@@ -1,1 +1,1 @@
-web: node dist/index.js
+web: node --experimental-modules --es-module-specifier-resolution=node dist/src/index.js
