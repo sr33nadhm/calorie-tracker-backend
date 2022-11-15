@@ -22,7 +22,7 @@ export const config: Env = {
   dbFilename: process.env.DB_FILENAME || "",
   dbTestFilename: process.env.DB_TEST_FILENAME || "",
   knexDebug: process.env.KNEX_DEBUG === "true",
-  port: parseInt(process.env.APP_PORT) || 5000,
+  port: parseInt(process.env.PORT) || 5000,
   defaultPage: 0,
   defaultPageSize: 10,
 };
