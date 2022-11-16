@@ -22,7 +22,7 @@ interface Env {
 export const config: Env = {
   env: (process.env.NODE_ENV as NodeEnv) || NodeEnv.DEV,
   knexDebug: process.env.KNEX_DEBUG === "true",
-  port: parseInt(process.env.PORT) || 5000,
+  port: parseInt(process.env.PORT),
   defaultPage: 0,
   defaultPageSize: 10,
   dbHost: process.env.DB_HOST,
