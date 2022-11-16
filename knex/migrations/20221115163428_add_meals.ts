@@ -13,5 +13,4 @@ export const up = (knex: Knex): Promise<void> =>
     table.foreign("userId").references("id").inTable(User.tableName);
   });
 
-export const down = (knex: Knex): Promise<void> =>
-  knex.schema.dropTable(Meal.tableName);
+export const down = (knex: Knex): Promise<void> => knex.schema.dropTable(Meal.tableName);

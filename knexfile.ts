@@ -3,7 +3,14 @@ import * as path from "path";
 import objection from "objection";
 
 const defaultKnexConfig = {
-  client: "sqlite3",
+  client: "pg",
+  connection: {
+    host: config.dbHost,
+    user: config.dbUser,
+    password: config.dbPass,
+    database: config.dbName,
+    charset: "utf8",
+  },
   migrations: {
     tableName: "knex_migrations",
     directory: path.resolve("knex/migrations"),
@@ -18,14 +25,11 @@ const defaultKnexConfig = {
 export default {
   development: {
     ...defaultKnexConfig,
-    connection: { filename: config.dbFilename },
   },
   test: {
     ...defaultKnexConfig,
-    connection: { filename: config.dbTestFilename },
   },
   production: {
     ...defaultKnexConfig,
-    connection: { filename: config.dbFilename },
   },
 };

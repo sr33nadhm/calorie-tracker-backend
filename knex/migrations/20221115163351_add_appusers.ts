@@ -12,5 +12,4 @@ export const up = (knex: Knex): Promise<void> =>
     table.integer("spendLimit").defaultTo(1000).notNullable();
   });
 
-export const down = (knex: Knex): Promise<void> =>
-  knex.schema.dropTable(User.tableName);
+export const down = (knex: Knex): Promise<void> => knex.schema.dropTable(User.tableName);

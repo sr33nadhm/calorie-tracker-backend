@@ -9,7 +9,7 @@ export class User extends Base {
   calorieLimit!: number;
   spendLimit!: number;
 
-  static tableName = "users";
+  static tableName = "appusers";
 }
 
 export default User;

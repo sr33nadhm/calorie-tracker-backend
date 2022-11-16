@@ -9,20 +9,24 @@ enum NodeEnv {
 
 interface Env {
   env: NodeEnv;
-  dbFilename: string;
-  dbTestFilename: string;
   knexDebug: boolean;
   port: number;
   defaultPage: number;
   defaultPageSize: number;
+  dbHost: string;
+  dbUser: string;
+  dbPass: string;
+  dbName: string;
 }
 
 export const config: Env = {
   env: (process.env.NODE_ENV as NodeEnv) || NodeEnv.DEV,
-  dbFilename: process.env.DB_FILENAME || "",
-  dbTestFilename: process.env.DB_TEST_FILENAME || "",
   knexDebug: process.env.KNEX_DEBUG === "true",
   port: parseInt(process.env.PORT) || 5000,
   defaultPage: 0,
   defaultPageSize: 10,
+  dbHost: process.env.DB_HOST,
+  dbUser: process.env.DB_USER,
+  dbPass: process.env.DB_PASS,
+  dbName: process.env.DB_NAME,
 };

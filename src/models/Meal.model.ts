@@ -20,7 +20,7 @@ export class Meal extends Base {
         modelClass: User,
         join: {
           from: "meals.userId",
-          to: "users.id",
+          to: "appusers.id",
         },
       },
     };
