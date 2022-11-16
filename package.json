@@ -9,7 +9,6 @@
   },
   "scripts": {
     "build": "tsc && npm run db:migrate",
-    "postbuild": "",
     "ts-node": "cross-env NODE_OPTIONS=\"--loader=ts-node/esm --no-warnings --experimental-specifier-resolution=node\" node",
     "watch-node": "nodemon dist/src/index.js",
     "start": "node --experimental-modules --es-module-specifier-resolution=node dist/src/index.js",
