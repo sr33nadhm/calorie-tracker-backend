@@ -5,7 +5,7 @@ import cors from "cors";
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:3333"];
+const allowedOrigins = ["http://localhost:3333", "https://sreenadh.dev"];
 
 const options: cors.CorsOptions = {
   origin: allowedOrigins,
